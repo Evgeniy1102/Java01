@@ -18,7 +18,7 @@ public class GroupHelper extends HelperBase {
     }
 
     public void submitGroupCreation() {
-        click("submit");
+        click(By.name("submit"));
     }
 
     public void fillGroupForm(GroupData groupData) {
@@ -28,14 +28,22 @@ public class GroupHelper extends HelperBase {
     }
 
     public void initGroupCreation() {
-        click("new");
+        click(By.name("new"));
     }
 
     public void deleteSelectedGroups() {
-        click("delete");
+        click(By.name("delete"));
     }
 
     public void selectGroup() {
-        click("selected[]");
+        click(By.name("selected[]"));
+    }
+
+    public void initGroupModofication() {
+        click(By.name("edit"));
+    }
+
+    public void submitGroupModification() {
+        click(By.name("update"));
     }
 }
