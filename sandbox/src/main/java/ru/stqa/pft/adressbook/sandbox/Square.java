@@ -1,4 +1,4 @@
-package ru.stqa.pft.sandbox;
+package ru.stqa.pft.adressbook.sandbox;
 
 /**
  * Created by Евгений Сироткин on 16.02.2017.
