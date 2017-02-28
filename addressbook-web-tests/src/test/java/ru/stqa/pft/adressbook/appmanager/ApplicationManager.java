@@ -30,13 +30,12 @@ public class ApplicationManager {
         if (Objects.equals(browser, BrowserType.FIREFOX)) {
             wd = new FirefoxDriver();
         } else if (Objects.equals(browser, BrowserType.CHROME)){
-
             wd = new ChromeDriver();
         } else if (Objects.equals(browser, BrowserType.IE)){
             wd = new InternetExplorerDriver();
         }
-        wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        wd.get("http://localhost/addressbook/group.php");
+        //wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        wd.get("http://localhost/addressbook");
         groupHelper = new GroupHelper(wd);
         sessionHelper = new SessionHelper(wd);
         navigationHelper = new NavigationHelper(wd);

@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  * Created by Евгений Сироткин on 21.02.2017.
  */
 public class NavigationHelper extends HelperBase{
-    private FirefoxDriver wd;
+    private WebDriver wd;
 
     public NavigationHelper(WebDriver wd) {
         super(wd);
