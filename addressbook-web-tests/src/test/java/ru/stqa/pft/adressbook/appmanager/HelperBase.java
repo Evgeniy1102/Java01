@@ -2,7 +2,6 @@ package ru.stqa.pft.adressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.NoSuchElementException;
@@ -11,9 +10,9 @@ import java.util.NoSuchElementException;
  * Created by Евгений Сироткин on 21.02.2017.
  */
 public class HelperBase {
-    protected WebDriver wd;
+    protected FirefoxDriver wd;
 
-    public HelperBase(WebDriver wd) {
+    public HelperBase(FirefoxDriver wd) {
         this.wd = wd;
     }
 
@@ -23,13 +22,8 @@ public class HelperBase {
 
     protected void type(By locator, String text) {
         wd.findElement(locator).click();
-        if (text != null) {
-            String existingtext = wd.findElement(locator).getAttribute("value");
-            if (! text.equals(existingtext)){
-                wd.findElement(locator).clear();
-                wd.findElement(locator).sendKeys(text);
-            }
-        }
+        wd.findElement(locator).clear();
+        wd.findElement(locator).sendKeys(text);
     }
 
     public boolean isAlertPresent() {
